@@ -81,4 +81,19 @@ public final class InputManager implements KeyListener {
 	public void keyTyped(final KeyEvent key) {
 
 	}
+
+	// p1 input（WASD + SPACE）
+	public boolean p1Right() { return isKeyDown(KeyEvent.VK_D); }
+	public boolean p1Left()  { return isKeyDown(KeyEvent.VK_A); }
+	public boolean p1Up()    { return isKeyDown(KeyEvent.VK_W); }
+	public boolean p1Down()  { return isKeyDown(KeyEvent.VK_S); }
+	public boolean p1Fire()  { return isKeyDown(KeyEvent.VK_SPACE); }
+
+	// p2 input（方向键 + ENTER）
+	public boolean p2Right() { return isKeyDown(KeyEvent.VK_RIGHT); }
+	public boolean p2Left()  { return isKeyDown(KeyEvent.VK_LEFT); }
+	public boolean p2Up()    { return isKeyDown(KeyEvent.VK_UP); }
+	public boolean p2Down()  { return isKeyDown(KeyEvent.VK_DOWN); }
+	public boolean p2Fire()  { return isKeyDown(KeyEvent.VK_ENTER); }
+
 }

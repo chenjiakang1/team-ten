@@ -332,12 +332,26 @@ public final class DrawManager {
 	public void drawLives(final Screen screen, final int lives) {
 		backBufferGraphics.setFont(fontRegular);
 		backBufferGraphics.setColor(Color.WHITE);
-		backBufferGraphics.drawString(Integer.toString(lives), 20, 25);
+		backBufferGraphics.drawString("P1: " + lives, 20, 25);
 		Ship dummyShip = new Ship(0, 0);
 		for (int i = 0; i < lives; i++)
 			drawEntity(dummyShip, 40 + 35 * i, 10);
 	}
 
+	public void drawLivesP2(final Screen screen, final int lives) {
+		backBufferGraphics.setFont(fontRegular);
+		backBufferGraphics.setColor(Color.WHITE);
+
+		int labelX = 20;
+		int labelY = 25 + 40;
+
+		backBufferGraphics.drawString("P2: " + lives, labelX, labelY);
+
+		Ship dummyShip = new Ship(0, 0);
+		for (int i = 0; i < lives; i++) {
+			drawEntity(dummyShip, 40 + 35 * i, labelY - 15);
+		}
+	}
 	/**
 	 * Draws the items HUD (shop items and dropped items).
 	 * 
