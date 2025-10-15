@@ -439,7 +439,8 @@ public class GameScreen extends Screen {
 		drawManager.drawLivesP2(this, this.livesP2);
 		drawManager.drawTime(this, this.elapsedTime);
 		drawManager.drawItemsHUD(this);
-		drawManager.drawHorizontalLine(this, SEPARATION_LINE_HEIGHT - 1);
+        drawManager.drawLevel(this, this.level);
+        drawManager.drawHorizontalLine(this, SEPARATION_LINE_HEIGHT - 1);
 		drawManager.drawHorizontalLine(this, ITEMS_SEPARATION_LINE_HEIGHT);
 
         if (this.achievementText != null && !this.achievementPopupCooldown.checkFinished()) {
